@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TMSandbox Suite" parallel="false">
+
+  <test name="TMSandbox API Test">
+    <classes>
+      <class name="org.tmsandbox.test.TMSandboxTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

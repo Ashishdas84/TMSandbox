@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 16 10:30:58 CST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>4 seconds (4922 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.tmsandbox.test.TMSandboxTest.testCategoryTMSandbox()'><b>testCategoryTMSandbox</b><br>Test class: org.tmsandbox.test.TMSandboxTest<br/>
+<a href="#Output-1139700454" onClick='toggleBox("Output-1139700454", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1139700454" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1139700454">
+Starting new testcase: testCategoryTMSandbox<br/>
+========================================<br/>
+GET: https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false<br/>
+Status: 200 OK<br/>
+========================================<br/>
+Response Body: {"CategoryId":6327,"Name":"Carbon credits","Path":"\/Business-farming-industry\/Carbon-credits","CanListAuctions":true,"CanListClassifieds":true,"CanRelist":true,"LegalNotice":"Compliance Declaration\u000aI confirm that these carbon credits are certified and registered with a carbon credits registry. ","DefaultDuration":14,"AllowedDurations":[2,3,4,5,6,7,10,14],"Fees":{"Bundle":15.0000,"EndDate":0.2500,"Feature":10.0000,"Gallery":2.0000,"Listing":29.0000,"Reserve":0.2500,"Subtitle":0.5500,"TenDays":0.2500,"ListingFeeTiers":[{"MinimumTierPrice":0,"FixedFee":29.00}],"SecondCategory":0.9900},"FreePhotoCount":20,"MaximumPhotoCount":20,"IsFreeToRelist":true,"Promotions":[{"Id":1,"Name":"Basic","Description":"Lowest position in category","Price":0.0000,"MinimumPhotoCount":0},{"Id":2,"Name":"Gallery","Description":"Good position in category \u000a2x larger image in desktop site search results","Price":2.0000,"OriginalPrice":2.0000,"MinimumPhotoCount":0},{"Id":3,"Name":"Feature","Description":"Better position in category \u000a4x larger image in desktop site search results","Price":10.0000,"OriginalPrice":10.0000,"Recommended":true,"MinimumPhotoCount":0},{"Id":4,"Name":"Feature Combo","Description":"Best position in category \u000aIncludes benefits of Feature \u000aHighlights listing in search results","Price":15.0000,"OriginalPrice":15.0000,"MinimumPhotoCount":0}],"EmbeddedContentOptions":[],"MaximumTitleLength":80,"AreaOfBusiness":1,"DefaultRelistDuration":7}<br/>
+========================================<br/>
+*******   Acceptance Criteria   *******<br/>
+========================================<br/>
+Verifing the Name: Carbon credits<br/>
+Verifing the CanRelist<br/>
+Verifing the Description contains: 2x larger image<br/>
+Completed the testcase: testCategoryTMSandbox<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>org.tmsandbox.test.TMSandboxTest@52e677af</td></tr>
+</table><p>
+</body>
+</html>
